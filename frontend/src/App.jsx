@@ -71,7 +71,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1>🔐 Güvenli Dosya Paylaşımı</h1>
+      <h1>KeyDrop: Güvenli Dosya Paylaşımı</h1>
 
       {/* Sekmeler */}
       <div className="tabs">
@@ -94,6 +94,19 @@ function App() {
         <div className="card">
           <h2>Dosya Yükle & Şifrele</h2>
           <input type="file" onChange={(e) => setFile(e.target.files[0])} />
+          {/* Eğer dosya seçildiyse ismini göster
+          {file && (
+            <div
+              style={{
+                marginTop: "10px",
+                color: "green",
+                fontWeight: "bold",
+              }}
+            >
+              Seçilen Dosya: {file.name}
+            </div>
+          )} */}
+
           <button className="action-btn" onClick={handleUpload}>
             Yükle
           </button>
@@ -101,7 +114,7 @@ function App() {
           {uploadResult && (
             <div className="success-box">
               <p>
-                ✅ <strong>Dosya Şifrelendi!</strong>
+                <strong>Dosya Şifrelendi!</strong>
               </p>
               <p>Dosya Adı: {uploadResult.filename}</p>
               <p>

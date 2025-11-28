@@ -14,8 +14,13 @@ body {
   max-width: 500px;
 }
 
-h1 {
+h1,
+h2 {
   color: #333;
+}
+
+h1 {
+  font-size: 40px;
 }
 
 .card {
@@ -24,6 +29,7 @@ h1 {
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
+  justify-items: center;
 }
 
 .tabs button {
@@ -42,6 +48,17 @@ h1 {
 }
 
 input {
+  display: block;
+  width: 90%;
+  padding: 10px;
+  margin: 10px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+}
+
+.file-input {
   display: block;
   width: 90%;
   padding: 10px;
