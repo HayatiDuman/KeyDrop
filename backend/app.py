@@ -2,6 +2,7 @@
 import traceback
 
 from flask import Flask, request, jsonify, send_from_directory, render_template
+from flask_cors import CORS
 import os
 import json
 from cryptography.fernet import Fernet
@@ -9,6 +10,7 @@ from werkzeug.utils import secure_filename
 
 # Flask uygulamasini olustur
 app = Flask(__name__)
+CORS(app)
 app.config['UPLOAD_FOLDER'] = 'uploads/encrypted/'
 app.config['DECRYPT_FOLDER'] = 'uploads/decrypted/'
 app.config['SECRET_KEY'] = 'supersecretkey'
